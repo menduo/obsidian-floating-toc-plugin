@@ -16,6 +16,7 @@ export interface FlotingTOCSetting {
   barStyle: string;
   enableBarHeadingText: boolean;
   enableContentOffset: boolean;
+  enableDragReorder: boolean;
 }
 
 export const DEFAULT_SETTINGS: FlotingTOCSetting = {
@@ -32,5 +33,6 @@ export const DEFAULT_SETTINGS: FlotingTOCSetting = {
   enableHeadingNowrap: true,
   barStyle: "enable-edge-style",
   enableBarHeadingText: false,
-  enableContentOffset: false
+  enableContentOffset: false,
+  enableDragReorder: false
 };

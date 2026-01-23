@@ -2206,3 +2206,31 @@ body.float-outline-style.enable-bold-bar .heading-list-item::before
   background: var(--scrollbar-thumb-bg);
   border-radius: 3px;
 }
+
+/* 拖拽重排样式 */
+.heading-list-item.draggable-heading {
+  cursor: move;
+}
+
+.heading-list-item.dragging {
+  opacity: 0.5;
+  background: var(--background-modifier-hover);
+}
+
+.heading-list-item.drag-over-top {
+  border-top: 2px solid var(--interactive-accent);
+}
+
+.heading-list-item.drag-over-bottom {
+  border-bottom: 2px solid var(--interactive-accent);
+}
+
+/* 拖拽时的过渡效果 */
+.heading-list-item.draggable-heading {
+  transition: opacity 0.2s, background 0.2s;
+}
+
+/* 拖拽手柄提示 */
+.heading-list-item.draggable-heading:hover {
+  background: var(--background-modifier-hover);
+}

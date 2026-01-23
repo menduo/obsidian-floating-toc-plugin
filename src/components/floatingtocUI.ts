@@ -18,6 +18,7 @@ import {
     toggleAllHeadings,
 } from "./toggleCollapse";
 import { t } from 'src/translations/helper';
+import { enableDragReorder } from "./dragReorder";
 
 export async function renderHeader(
     plugin: FloatingToc,
@@ -196,6 +197,9 @@ export async function createLi(
     const line_dom = li_dom.createEl("div");
     line_dom.addClass("line-wrap");
     line_dom.createDiv().addClass("line");
+
+    // 添加拖拽功能
+    enableDragReorder(plugin, li_dom, heading, index, view);
 }
 
 const openFiletoline = (view: MarkdownView, lineNumber: number) => {
@@ -396,6 +400,8 @@ export function creatToc(app: App, plugin: FloatingToc): void {
                     activeDocument.body.addClass("enable-heading-nowrap");
                 if (plugin.settings.enableBarHeadingText)
                     activeDocument.body.addClass("enable-bar-heading-text");
+                if (plugin.settings.enableContentOffset)
+                    activeDocument.body.addClass("enable-content-offset");
 
 
 

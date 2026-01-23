@@ -195,6 +195,18 @@ export class FlotingTOCSettingTab extends PluginSettingTab {
         }));
 
     new Setting(interaction)
+      .setName(t('Enable Drag to Reorder'))
+      .setDesc(t('When enabled, you can drag headings in TOC to reorder them in the document'))
+      .addToggle(toggle => toggle.setValue(this.plugin.settings?.enableDragReorder)
+        .onChange((value) => {
+          this.plugin.settings.enableDragReorder = value;
+          this.plugin.saveSettings();
+          setTimeout(() => {
+            dispatchEvent(new Event("refresh-toc"));
+          }, 100);
+        }));
+
+    new Setting(interaction)
       .setName(t('Enable Tooltip'))
       .addToggle(toggle => toggle.setValue(this.plugin.settings?.isTooltip)
         .onChange((value) => {

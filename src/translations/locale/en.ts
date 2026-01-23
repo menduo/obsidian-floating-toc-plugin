@@ -8,6 +8,8 @@ export default {
     'Default Pin':'Default Pin',
     'Enable Content Offset When Pinned':'Enable Content Offset When Pinned',
     'When enabled, note content will be offset when TOC is pinned':'When enabled, note content will be offset when TOC is pinned',
+    'Enable Drag to Reorder':'Enable Drag to Reorder',
+    'When enabled, you can drag headings in TOC to reorder them in the document':'When enabled, you can drag headings in TOC to reorder them in the document',
     'Enable Tooltip':'Enable Tooltip',
     'Enable Search':'Enable Search',
     'Enable quick search functionality in floating TOC. Press any key when TOC is active to start searching.':'Enable quick search functionality in floating TOC. Press any key when TOC is active to start searching.',

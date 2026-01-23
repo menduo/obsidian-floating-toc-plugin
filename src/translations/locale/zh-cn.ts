@@ -9,6 +9,8 @@ export default {
   'Default Pin':'是否默认钉在笔记上',
   'Enable Content Offset When Pinned':'固定时启用笔记内容偏移',
   'When enabled, note content will be offset when TOC is pinned':'启用后，当目录固定时笔记内容会自动偏移',
+  'Enable Drag to Reorder':'启用拖拽重排',
+  'When enabled, you can drag headings in TOC to reorder them in the document':'启用后，可以拖拽目录中的标题来重新排列文档中的内容',
   'Enable Tooltip':'是否开启标题提示',
   'Enable Search':'启用搜索功能',
   'Enable quick search functionality in floating TOC. Press any key when TOC is active to start searching.':'启用浮动目录的快速搜索功能。当目录激活时按任意键开始搜索。',
