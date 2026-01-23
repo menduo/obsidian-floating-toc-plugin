@@ -798,13 +798,13 @@ display: none;
   padding-left: 2rem;
 }
 
-.workspace-leaf-content .floating-toc-div.pin:is(.floating-left, .floating-both)+.markdown-source-view>.cm-editor {
+body.enable-content-offset .workspace-leaf-content .floating-toc-div.pin:is(.floating-left, .floating-both)+.markdown-source-view>.cm-editor {
   padding-left: min(var(--floating-toc-line-width), var(--actual-toc-width));
 }
 
 
 
-.workspace-leaf-content .floating-toc-div.pin:is(.floating-left, .floating-both)~.markdown-reading-view {
+body.enable-content-offset .workspace-leaf-content .floating-toc-div.pin:is(.floating-left, .floating-both)~.markdown-reading-view {
   padding-left: min(var(--floating-toc-line-width), var(--actual-toc-width));
 }
 

@@ -226,6 +226,7 @@ export default class FloatingToc extends Plugin {
 	public  BAR_STYLE_CLASSES = [
 		"enable-bar-heading-text",
 		"enable-heading-nowrap",
+		"enable-content-offset",
 		"pin",
 		"hide",
 		"default-bar-style",

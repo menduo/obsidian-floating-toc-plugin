@@ -183,6 +183,18 @@ export class FlotingTOCSettingTab extends PluginSettingTab {
         }));
 
     new Setting(interaction)
+      .setName(t('Enable Content Offset When Pinned'))
+      .setDesc(t('When enabled, note content will be offset when TOC is pinned'))
+      .addToggle(toggle => toggle.setValue(this.plugin.settings?.enableContentOffset)
+        .onChange((value) => {
+          this.plugin.settings.enableContentOffset = value;
+          this.plugin.saveSettings();
+          setTimeout(() => {
+            dispatchEvent(new Event("refresh-toc"));
+          }, 100);
+        }));
+
+    new Setting(interaction)
       .setName(t('Enable Tooltip'))
       .addToggle(toggle => toggle.setValue(this.plugin.settings?.isTooltip)
         .onChange((value) => {

@@ -6,6 +6,8 @@ export default {
     'Whichever option is selected, the corresponding heading level will be hidden':'Whichever option is selected, the corresponding heading level will be hidden',    
     'Plugin Settings':'Plugin Settings',
     'Default Pin':'Default Pin',
+    'Enable Content Offset When Pinned':'Enable Content Offset When Pinned',
+    'When enabled, note content will be offset when TOC is pinned':'When enabled, note content will be offset when TOC is pinned',
     'Enable Tooltip':'Enable Tooltip',
     'Enable Search':'Enable Search',
     'Enable quick search functionality in floating TOC. Press any key when TOC is active to start searching.':'Enable quick search functionality in floating TOC. Press any key when TOC is active to start searching.',

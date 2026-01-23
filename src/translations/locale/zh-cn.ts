@@ -7,6 +7,8 @@ export default {
   'Whichever option is selected, the corresponding heading level will be hidden': '隐藏选中的标题层级，选中的标题不会在浮动目录中显示。',
   'Plugin Settings': '插件设置',
   'Default Pin':'是否默认钉在笔记上',
+  'Enable Content Offset When Pinned':'固定时启用笔记内容偏移',
+  'When enabled, note content will be offset when TOC is pinned':'启用后，当目录固定时笔记内容会自动偏移',
   'Enable Tooltip':'是否开启标题提示',
   'Enable Search':'启用搜索功能',
   'Enable quick search functionality in floating TOC. Press any key when TOC is active to start searching.':'启用浮动目录的快速搜索功能。当目录激活时按任意键开始搜索。',
