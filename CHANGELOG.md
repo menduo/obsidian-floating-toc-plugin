@@ -1,5 +1,13 @@
 # Changelog
 
+## 2.7.1 (2026-01-24)
+### 消除抖动，增加拖拽标题排序
+### 增加可以拖拽大纲
+### Merge branch 'master' of https://github.com/PKM-er/obsidian-floating-toc-plugin
+### 增加当盯住目录的时候笔记是否偏移选项
+### Update manifest.json and CHANGELOG.md for version 2.7.0
+
+
 ## 2.7.0 (2025-07-11)
 ### #142 #135  fixed
  Supports title search. Default shortcut key `alt+f` activates.
