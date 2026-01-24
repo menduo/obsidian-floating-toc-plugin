@@ -480,24 +480,24 @@ export default class FloatingToc extends Plugin {
 		);
 		this.addSettingTab(new FlotingTOCSettingTab(this.app, this));
 
-		updateHeadingsForView(
-			this.app.workspace.getActiveViewOfType(MarkdownView)
-		);
-		
-			this.app.workspace.on("window-open", (leaf) => {
-				console.log("window-open")
-				leaf.doc.addEventListener(
-					"scroll",
-					(event) => {
-						this.handleScroll(this.app, this, event);
-					},
-					true
-				);
-			});
-		
-		
+		this.app.workspace.on("window-open", (leaf) => {
+			console.log("window-open")
+			leaf.doc.addEventListener(
+				"scroll",
+				(event) => {
+					this.handleScroll(this.app, this, event);
+				},
+				true
+			);
+		});
+
+
 		this.app.workspace.onLayoutReady(() => {
 			this.app.workspace.trigger("parse-style-settings");
+			// 在工作区就绪后初始化当前文件的目录
+			updateHeadingsForView(
+				this.app.workspace.getActiveViewOfType(MarkdownView)
+			);
 		});
 	}
 

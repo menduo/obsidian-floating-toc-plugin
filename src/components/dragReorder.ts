@@ -1,7 +1,6 @@
 import type FloatingToc from "src/main";
 import { MarkdownView, HeadingCache, Notice } from "obsidian";
-import { selfDestruct } from "src/main";
-import { creatToc } from "./floatingtocUI";
+import { refresh_node } from "src/main";
 
 /**
  * 获取标题的内容范围（包括标题本身和其下的所有内容，直到下一个同级或更高级标题）
@@ -226,6 +225,12 @@ export function enableDragReorder(
             // 强制更新元数据缓存
             const file = view.file;
             if (file) {
+                // 添加更新中的视觉反馈
+                const floatToc = view.contentEl.querySelector('.floating-toc');
+                if (floatToc) {
+                    floatToc.addClass('updating');
+                }
+
                 // 创建一个 Promise 来等待元数据缓存更新
                 const waitForCacheUpdate = new Promise<void>((resolve) => {
                     const eventRef = plugin.app.metadataCache.on('changed', (changedFile) => {
@@ -258,10 +263,15 @@ export function enableDragReorder(
                     }
                 }
 
-                // 完全重建大纲
-                selfDestruct();
-                await new Promise(resolve => setTimeout(resolve, 50));
-                creatToc(plugin.app, plugin);
+                // 使用平滑更新而不是完全重建
+                refresh_node(plugin, view);
+
+                // 移除更新中的视觉反馈
+                if (floatToc) {
+                    setTimeout(() => {
+                        floatToc.removeClass('updating');
+                    }, 150);
+                }
             }
         }
     });
