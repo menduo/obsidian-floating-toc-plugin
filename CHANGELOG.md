@@ -1,5 +1,12 @@
 # Changelog
 
+## 2.7.5 (2026-07-01)
+### Merge pull request #2 from menduo/copilot/fix-toc-width-issue
+fix: stable content offset width when switching tabs with pinned TOC
+### fix: use fixed line-width for content offset to prevent tab-switch jitter
+### Update manifest.json and CHANGELOG.md for version 2.7.4
+
+
 ## 2.7.4 (2026-07-01)
 ### Add permissions for contents write in release workflow
 ### Change GITHUB_TOKEN to GH_TOKEN in release workflow
