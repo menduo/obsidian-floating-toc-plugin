@@ -138,7 +138,7 @@ jobs:
                     ${{ env.OUTPUT_DIR }}/main.js
                     ./manifest.json
                     ${{ env.OUTPUT_DIR }}/styles.css
-                  token: ${{ secrets.GITHUB_TOKEN }}
+                  token: ${{ secrets.GH_TOKEN }}
             
             - name: Commit updated files
               if: github.event_name == 'push'
