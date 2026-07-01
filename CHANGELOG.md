@@ -1,5 +1,10 @@
 # Changelog
 
+## 2.7.4 (2026-07-01)
+### Add permissions for contents write in release workflow
+### Change GITHUB_TOKEN to GH_TOKEN in release workflow
+
+
 ## 2.7.2 (2026-07-01)
 ### Add Style Settings control for floating TOC minimum width (#156)
 - New `Min line width of floating-toc` option exposed to the Style Settings plugin, matching existing `Line Width` convention.
