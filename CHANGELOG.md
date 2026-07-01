@@ -1,5 +1,9 @@
 # Changelog
 
+## Unreleased
+### Add Style Settings control for floating TOC minimum width
+### Keep TOC min width responsive on narrow viewports
+
 ## 2.7.1 (2026-01-24)
 ### 消除抖动，增加拖拽标题排序
 ### 增加可以拖拽大纲
