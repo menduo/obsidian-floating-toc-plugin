@@ -1,8 +1,10 @@
 # Changelog
 
-## Unreleased
-### Add Style Settings control for floating TOC minimum width
-### Keep TOC min width responsive on narrow viewports
+## 2.7.2 (2026-07-01)
+### Add Style Settings control for floating TOC minimum width (#156)
+- New `Min line width of floating-toc` option exposed to the Style Settings plugin, matching existing `Line Width` convention.
+- Defaults to `6rem` — identical to the previous hardcoded value, so no regression for existing users.
+- Responsive: min-width relaxes automatically on narrow viewports to prevent overflow.
 
 ## 2.7.1 (2026-01-24)
 ### 消除抖动，增加拖拽标题排序
