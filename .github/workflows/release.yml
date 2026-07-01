@@ -11,6 +11,9 @@ on:
         # Sequence of patterns matched against refs/tags
         tags:
             - "*" # Push events to matching any tag format, i.e. 1.0, 20.15.10
+permissions:
+  contents: write
+
 env:
     PLUGIN_NAME: floating-toc
     OUTPUT_DIR: ./build
