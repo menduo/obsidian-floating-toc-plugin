@@ -203,6 +203,14 @@ settings:
         default: 18
         format: rem
     -
+        id: floating-toc-min-line-width
+        title: Min line width of floating-toc
+        title.zh: 目录最小显示宽度
+        description: The minimum line width in rem units (1rem = Body font size)
+        type: variable-number
+        default: 6
+        format: rem
+    -
         id: floating-toc-appearance-header
         title:  Appearance settings
         title.zh: 外观设置
@@ -298,6 +306,7 @@ settings:
   --floating-toc-position: 0px;
   --focus-heading: 0.9;
   --floating-toc-line-width: 18rem;
+  --floating-toc-min-line-width: 6rem;
   --actual-toc-width: 18rem;
   --heading-color-indicator:var(--background-secondary);
 
@@ -716,7 +725,7 @@ body.enable-bold-bar .floating-toc-div:hover .heading-list-item>.line-wrap {
 .floating-toc-div:hover .floating-toc {
   z-index: 2;
   align-items: flex-start;
-  min-width: 6rem;
+  min-width: min(var(--floating-toc-min-line-width), var(--floating-toc-line-width), calc(100vw - 2rem));
   max-width: var(--floating-toc-line-width);
   width: fit-content;
   overflow-y: auto;
